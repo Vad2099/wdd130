@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     background-color: steelblue;
     padding: 10px;
@@ -11,6 +17,7 @@ nav a {
 
 h1 {
     color: steelblue;
+    margin: 20px 0; /* Spacing around the title */
 }
 
 img {
@@ -22,30 +29,33 @@ img {
 }
 
 p {
-    padding: 0;
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Spacing above and below the paragraph */
 }
 
 main {
     max-width: 840px;
+    margin: 0;
 }
 
+/* Styles for images within the main content */
 main img {
+    float: right;
     width: 150px;
     height: auto;
 }
 
+/* Styles for the sidebar */
 aside{
     width: 20rem;
     margin: 10px;
-    border: 1px solid rgba(0, 0, 0, 0,2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
+    position: relative; /* Ensure child elements are positioned correctly */
 }
 
+/* Styles for images within the sidebar */
 aside img {
-    width: 200px;
+    width: 200px; 
     height: auto;
 }
 
@@ -54,3 +64,24 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
 }
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0,2);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+/* Styles for the header within the sidebar */
+aside h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add spacing around the header */
+}
+
+
