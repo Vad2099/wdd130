@@ -1,0 +1,147 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ultra&display=swap');
+
+/* Define CSS variables in :root */
+:root {
+  --primary-color: #141414;
+  --secondary-color: #87CEEB;
+  --accent1-color: #236CD1;
+  --accent2-color: #DBD7D2;
+  --accent3-color: #F7F7F7;
+
+  --heading-font: 'Ultra', serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  --nav-background-color: #141414;
+  --nav-link-color: #236CD1;
+  --nav-hover-link-color: #87CEEB;
+  --nav-hover-background-color: #DBD7D2;
+
+  --main-bg-color: #fff;
+  --text-color: #333;
+  --footer-bg-color: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Header styles */
+header {
+  padding: 20px;
+ 
+}
+
+/* Paragraph styles */
+p {
+  padding: 10px;
+  color: var(--text-color);
+
+}
+
+/* Navigation styles */
+nav {
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display:block;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+  padding: 10px;
+}
+
+.sociallinks {
+  margin-top: 10px;
+}
+
+.sociallinks a {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.sociallinks img {
+  width: 30px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Style the Hero Container using Position Absolute */
+div.Hero {
+  position: relative;
+}
+
+div.Hero img {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+div.Hero h1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-size: 36px; /* Adjust as needed */
+  color: var(--secondary-color); /* Change to match your design */
+}
+
+div.Hero article {
+  position: absolute;
+  top: 15%; /* Adjust as needed */
+  left: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust background color and opacity */
+  padding: 10px;
+}
+
+div.Hero p {
+  padding: 10px;
+  color: var(--accent3-color);
+  font-weight: 300;
+}
+
+div.Hero article img {
+  float: right;
+  top: 10px;
+  width: 30%; /* Adjust as needed */
+  height: fit-content;
+}
+
+/* Add more styles as needed */
