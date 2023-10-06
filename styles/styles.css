@@ -5,17 +5,24 @@
 }
 
 nav {
+    display: flex;
     background-color: steelblue;
     padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
     display: block;
+    color: white;
     padding: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 h1 {
+    border-bottom: whitesmoke;
     color: steelblue;
     margin: 20px 0; /* Spacing around the title */
 }
@@ -33,9 +40,20 @@ p {
     padding: 10px 0; /* Spacing above and below the paragraph */
 }
 
-main {
+header, .grid, footer{
     max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+main {
     margin: 0;
+    grid-column: 2 / 3;
+    margin: 1rem;
 }
 
 /* Styles for images within the main content */
@@ -51,6 +69,8 @@ aside{
     margin: 10px;
     text-align: center;
     position: relative; /* Ensure child elements are positioned correctly */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 /* Styles for images within the sidebar */
@@ -68,7 +88,7 @@ footer {
 /* Class Selectors */
 .box {
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0,2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
