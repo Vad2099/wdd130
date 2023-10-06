@@ -22,7 +22,8 @@ nav a {
 }
 
 h1 {
-    border-bottom: whitesmoke;
+    border-bottom: 2px solid steelblue;
+    padding-bottom: 10px;
     color: steelblue;
     margin: 20px 0; /* Spacing around the title */
 }
