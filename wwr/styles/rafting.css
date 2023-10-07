@@ -8,20 +8,18 @@
   --accent1-color: #236CD1;
   --accent2-color: #DBD7D2;
   --accent3-color: #F7F7F7;
-
   --heading-font: 'Ultra', serif;
   --paragraph-font: 'Roboto', sans-serif;
-
   --nav-background-color: #141414;
   --nav-link-color: #236CD1;
   --nav-hover-link-color: #87CEEB;
   --nav-hover-background-color: #DBD7D2;
-
   --main-bg-color: #fff;
   --text-color: #333;
   --footer-bg-color: #f0f0f0;
 }
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -45,50 +43,80 @@ h2, h3, h4, h5, h6 {
 
 /* Header styles */
 header {
-  padding: 20px;
- 
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 300px 1fr 2fr;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  max-width: 1000px;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: var(--secondary-color);
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Paragraph styles */
 p {
   padding: 10px;
   color: var(--text-color);
-
+  line-height: 1.6;
 }
 
 /* Navigation styles */
 nav {
-  background-color: var(--nav-background-color);
+  text-align: center;
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-nav a {
-  display:block;
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  flex: 1 1 100%;
+  margin: 0 1rem;
+}
+
+.navigation a {
+  display: block;
   color: var(--nav-link-color);
+  padding: 30px;
   text-decoration: none;
-  padding: 1rem;
+  font-weight: 500;
 }
 
-nav a:link, nav a:visited {
-  color: var(--nav-link-color);
-}
-
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+.navigation a:hover {
+  color: brown;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.5s ease;
 }
 
 /* Footer styles */
 footer {
   background-color: var(--footer-bg-color);
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  margin-top: 2rem;
 }
 
 .sociallinks {
+  display: flex;
   margin-top: 10px;
+  justify-content: flex-end;
+  background-color: var(--nav-background-color);
 }
 
 .sociallinks a {
@@ -103,31 +131,35 @@ footer {
   display: inline-block;
 }
 
-/* Style the Hero Container using Position Absolute */
+/* Hero Container */
 div.Hero {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2;
   position: relative;
+  gap: 3rem;
 }
 
 div.Hero img {
   display: block;
   width: 100%;
-  height: 500px;
+  height: 95%;
 }
 
 div.Hero h1 {
   position: absolute;
   top: 5%;
   left: 20%;
-  font-size: 36px; /* Adjust as needed */
-  color: var(--secondary-color); /* Change to match your design */
+  font-size: 36px;
+  color: var(--secondary-color);
 }
 
 div.Hero article {
   position: absolute;
-  top: 15%; /* Adjust as needed */
-  left: 5%;
-  right: 5%;
-  background-color: rgba(255, 255, 255, 0.3); /* Adjust background color and opacity */
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 10px;
 }
 
@@ -140,8 +172,53 @@ div.Hero p {
 div.Hero article img {
   float: right;
   top: 10px;
-  width: 30%; /* Adjust as needed */
-  height: fit-content;
+  width: 30%;
+  height: auto;
 }
+
+/* Section styles */
+.history-section {
+  gap: 20px;
+  padding: 2rem;
+  text-align: center;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.content section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.content h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content section p {
+  margin-top: 1rem;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  text-align:left;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+figcaption {
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
 
 /* Add more styles as needed */
