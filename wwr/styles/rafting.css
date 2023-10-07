@@ -215,8 +215,10 @@ figure {
 
 figcaption {
   color: var(--primary-color);
-  margin-top: 10px;
+  margin-top: 2px;
+  padding: 3px;
   font-weight: bold;
+  text-align: center;
 }
 
 
