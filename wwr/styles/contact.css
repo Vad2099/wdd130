@@ -1,0 +1,309 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ultra&display=swap');
+
+/* Define CSS variables in :root */
+:root {
+  --primary-color: #141414;
+  --secondary-color: #87CEEB;
+  --accent1-color: #236CD1;
+  --accent2-color: #DBD7D2;
+  --accent3-color: #F7F7F7;
+  --heading-font: 'Ultra', serif;
+  --paragraph-font: 'Roboto', sans-serif;
+  --nav-background-color: #141414;
+  --nav-link-color: #236CD1;
+  --nav-hover-link-color: #87CEEB;
+  --nav-hover-background-color: #DBD7D2;
+  --main-bg-color: #fff;
+  --text-color: #333;
+  --footer-bg-color: #f0f0f0;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Header styles */
+header {
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 300px 1fr 2fr;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  max-width: 1000px;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: var(--secondary-color);
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Paragraph styles */
+p {
+  padding: 10px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation styles */
+nav {
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  flex: 1 1 100%;
+  margin: 0 1rem;
+}
+
+.navigation a {
+  display: block;
+  color: var(--nav-link-color);
+  padding: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: brown;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+.sociallinks {
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  background-color: var(--nav-background-color);
+}
+
+.sociallinks a {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.sociallinks img {
+  width: 30px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Hero Container */
+div.Hero {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2;
+  position: relative;
+  gap: 3rem;
+}
+
+div.Hero img {
+  display: block;
+  width: 100%;
+  height: 95%;
+}
+
+div.Hero h1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-size: 36px;
+  color: var(--secondary-color);
+}
+
+div.Hero article {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+}
+
+div.Hero p {
+  padding: 10px;
+  color: var(--accent3-color);
+  font-weight: 300;
+}
+
+div.Hero article img {
+  float: right;
+  top: 10px;
+  width: 30%;
+  height: auto;
+}
+
+/* Section styles */
+.history-section {
+  gap: 20px;
+  padding: 2rem;
+  text-align: center;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.content section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.content h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content section p {
+  margin-top: 1rem;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  text-align:left;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+figcaption {
+  color: var(--primary-color);
+  margin-top: 2px;
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Additions and modifications for the Contact Us page */
+
+/* Styles for the Company Information section */
+.company-information {
+  margin: 20px;
+  background-color: var(--accent3-color);
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+}
+
+.company-information p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.google-map {
+  margin-top: 20px;
+  /* Add styles for the embedded Google Map here */
+}
+
+/* Styles for Employee Profiles */
+.employee-profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.employee {
+    text-align:center;
+    max-width: 200px;
+}
+
+.employee img {
+  max-width: 100%;
+  border: 2px solid var(--primary-color);
+}
+
+.employee h2 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.employee p {
+  margin-top: 10px;
+}
+
+/* Styles for the Contact Form */
+.contact-form {
+  margin: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid var(--primary-color);
+}
+
+.contact-form .submit-button {
+  background-color: var(--accent1-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Additional styles for consistency with other forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Other styles for consistency with other pages */
+/* You can add more styles as needed */
