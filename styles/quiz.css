@@ -1,0 +1,96 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Roboto:wght@300&family=Ultra&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* quiz.css */
+body {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    color:darkgreen;
+    background: #fff ;
+}
+
+h1 {
+    color: #333;
+    text-align:center;
+    margin-bottom: 15px;
+}
+
+form {
+    max-width: 400px;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: grid;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+footer {
+    margin: 1rem auto 0;
+    margin-bottom: 1rem;
+    width: 650px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 2px solid #ccc;
+}
+
+
+.question-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.question-container img{
+    max-width: 80%;
+    text-align: center; 
+    margin-top: 10px;  
+    height: auto;
+}
+
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
