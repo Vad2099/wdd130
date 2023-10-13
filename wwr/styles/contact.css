@@ -296,6 +296,14 @@ figcaption {
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.75rem;
+  font-size: x-large;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Additional styles for consistency with other forms */
