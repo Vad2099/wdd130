@@ -1,0 +1,297 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ultra&display=swap');
+
+/* Define CSS variables in :root */
+:root {
+  --primary-color: #141414;
+  --secondary-color: #87CEEB;
+  --accent1-color: #236CD1;
+  --accent2-color: #DBD7D2;
+  --accent3-color: #F7F7F7;
+  --heading-font: 'Ultra', serif;
+  --paragraph-font: 'Roboto', sans-serif;
+  --nav-background-color: #141414;
+  --nav-link-color: #236CD1;
+  --nav-hover-link-color: #87CEEB;
+  --nav-hover-background-color: #DBD7D2;
+  --main-bg-color: #fff;
+  --text-color: #333;
+  --footer-bg-color: #f0f0f0;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Header styles */
+header {
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 300px 1fr 2fr;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  max-width: 1000px;
+  gap: 20px;
+  background-color: var(--footer-bg-color);
+}
+
+header h1 {
+  font-size: 36px;
+  color: var(--secondary-color);
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+}
+
+/* Paragraph styles */
+p {
+  padding: 10px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation styles */
+nav {
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  flex: 1 1 100%;
+  margin: 0 1rem;
+}
+
+.navigation a {
+  display: block;
+  color: var(--nav-link-color);
+  padding: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: burlywood;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+
+/* Footer styles */
+footer {
+  clear: both;
+  margin-top: 20px;
+  text-align: center;
+  background-color: var(--footer-bg-color);
+}
+
+.sociallinks {
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  background-color: var(--nav-background-color);
+}
+
+.sociallinks a {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.sociallinks img {
+  width: 30px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Main Content styles */
+/* Modifica el estilo de .content */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 30px auto;
+ 
+}
+
+/* Modifica el estilo de .trip para ajustar los elementos en la primera fila */
+.trip {
+  flex: 1;
+  max-width: 240px;
+  height: 450px;
+  margin: 30px;
+  margin-bottom: 200px;
+  text-align: center;
+  border: 1px solid var(--accent2-color);
+  padding: 20px;
+  background-color: var(--accent3-color);
+  float: left;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+}
+
+.trip img {
+  width: 200px; /* La imagen no superará el ancho del contenedor .trip */
+  height: 200px; /* La imagen no superará la altura del contenedor .trip */
+}
+
+.trip h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.trip p {
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.trip a.cta-button {
+  display: block;
+  background-color: var(--accent1-color);
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.trip a.cta-button:hover {
+  background-color: var(--nav-link-color);
+}
+
+/* Modifica el estilo de .trip-table para ajustar los elementos en la segunda fila */
+.trip-table {
+  max-width: 100%; /* Ajusta el ancho máximo de la tabla para que se extienda por toda la fila */
+  text-align: center; /* Centra el contenido de la tabla */
+  margin-top: 20px;
+  margin: 0 auto; /* Centra la tabla en el contenedor */
+  border: 1px solid var(--accent2-color); /* Agrega un borde a la tabla */
+  padding: 20px; /* Espaciado interno para la tabla */
+  background-color: var(--accent3-color); /* Fondo de la tabla */
+  border-radius: 5px; /* Bordes redondeados para la tabla */
+  border: 2px solid var(--primary-color);
+}
+
+.trip-table table {
+  width:100%; /* La tabla ocupa todo el ancho disponible */
+  border-collapse: collapse; /* Fusiona los bordes de las celdas de la tabla */
+}
+
+.trip-table table th, .trip-table table td {
+  padding: 20px; /* Espaciado interno en las celdas de la tabla */
+  border: 1px solid var(--accent2-color); /* Borde en las celdas de la tabla */
+  width: 50%; /* Divide el ancho de la tabla en 4 partes iguales (para 4 columnas) */
+}
+
+.trip-table table th {
+  background-color: var(--accent1-color); /* Color de fondo del encabezado de la tabla */
+  color: #fff; /* Color del texto en el encabezado de la tabla */
+  font-weight: bold; /* Texto en negrita para el encabezado de la tabla */
+}
+
+/* Añade más estilos según tus preferencias, como colores, tamaños de fuente, etc. */
+
+
+/* Section styles */
+.reservation-legend {
+  text-align: left;
+  position: relative; /* Para que los elementos secundarios se posicionen con respecto a este contenedor */
+  height: 300px; /* Ajusta la altura según tus necesidades */
+  margin-bottom: 200px;
+}
+
+.reservation-legend h1 {
+  position: absolute;
+  top: 20%; /* Centra verticalmente el encabezado */
+  left: 50%; /* Centra horizontalmente el encabezado */
+  transform: translate(-50%, -50%); /* Centra el texto */
+  color: white; /* Color del texto */
+  font-size: 32px; /* Tamaño de fuente del encabezado */
+  font-weight: bolder;
+  z-index: 1;
+}
+
+.reservation-legend p {
+  position: absolute;
+  top: 60%; /* Ajusta la posición vertical del primer párrafo según tus necesidades */
+  left: 50%; /* Centra horizontalmente el primer párrafo */
+  transform: translate(-50%, -50%); /* Centra el texto */
+  text-align: center;
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente del primer párrafo */
+  font-weight: bolder;
+}
+
+.reservation-legend p:nth-of-type(2) {
+  top: 90%; /* Ajusta la posición vertical del segundo párrafo según tus necesidades */
+  font-size: 18px; /* Tamaño de fuente del segundo párrafo */
+  font-weight: bolder;
+}
+
+.reservation-legend img {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor .reservation-legend */
+  height: 150%; /* La imagen ocupará toda la altura del contenedor .reservation-legend */
+  filter:brightness(0.7);
+  object-fit:fill;
+  
+}
+
+
+.content h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+content section p {
+  margin-top: 1rem;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+figcaption {
+  color: var(--primary-color);
+  margin-top: 2px;
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+}
